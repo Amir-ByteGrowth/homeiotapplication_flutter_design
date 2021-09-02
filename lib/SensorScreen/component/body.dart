@@ -120,12 +120,60 @@ class SensorScreenBody extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: size.height * 0.05),
-                CustomCard(
-                  icon: Icon(Icons.home_outlined,size: 55,color: Colors.grey,),
-                  size: size,
-                  title: "Entry",
-                  statusOn: "Open",
-                  statusOf: "Close",
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    CustomCard(
+                      icon: Icon(
+                        Icons.home_outlined,
+                        size: 55,
+                        color: Colors.grey,
+                      ),
+                      size: size,
+                      title: "Entry",
+                      statusOn: "Open",
+                      statusOf: "Close",
+                    ),
+                    CustomCard(
+                      icon: Icon(
+                        Icons.lightbulb_outline,
+                        size: 55,
+                        color: Colors.grey,
+                      ),
+                      size: size,
+                      title: "Lights",
+                      statusOn: "On",
+                      statusOf: "Off",
+                    )
+                  ],
+                ),
+                SizedBox(height: size.height * 0.05),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    CustomCard(
+                      icon: Icon(
+                        Icons.brightness_4_rounded,
+                        size: 55,
+                        color: Colors.grey,
+                      ),
+                      size: size,
+                      title: "LEAKS",
+                      statusOn: "NonDetected",
+                      statusOf: "",
+                    ),
+                    CustomCard(
+                      icon: Icon(
+                        Icons.device_thermostat,
+                        size: 55,
+                        color: Colors.grey,
+                      ),
+                      size: size,
+                      title: "Temprature",
+                      statusOn: "On",
+                      statusOf: "Off",
+                    )
+                  ],
                 )
               ],
             ),

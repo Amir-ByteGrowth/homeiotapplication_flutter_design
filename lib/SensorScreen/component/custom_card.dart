@@ -19,7 +19,7 @@ class _CustomCardState extends State<CustomCard>
     with SingleTickerProviderStateMixin {
   AnimationController _animationController;
   Animation _animation;
-  bool isChecked = true;
+  bool isChecked = false;
 
   @override
   void initState() {
@@ -113,8 +113,8 @@ class _CustomCardState extends State<CustomCard>
                                       vertical: 2, horizontal: 1),
                                   decoration: BoxDecoration(
                                     color: isChecked
-                                        ? Colors.grey.shade300
-                                        : kGreenColor,
+                                        ? kGreenColor
+                                        : Colors.grey.shade300,
                                     shape: BoxShape.circle,
                                   ),
                                 ),
@@ -136,10 +136,10 @@ class _CustomCardState extends State<CustomCard>
               ),
             ),
             Text(
-              isChecked ? widget.statusOf : widget.statusOn,
+              isChecked ? widget.statusOn: widget.statusOf  ,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: isChecked ? Colors.grey.withOpacity(0.6) : kGreenColor,
+                color: isChecked ? kGreenColor : Colors.grey.withOpacity(0.6),
               ),
             ),
           ],
